@@ -20,12 +20,12 @@ function LoginCallback() {
         }).then(async (res) => {
             res = await res.json()
             console.log(res)
-            // if (res.success === true) {
-            //     window.location.href = '/profile';
-            // }
-            // else {
-            //     window.location.href = '/login';
-            // }
+            if (res.success === true) {
+                window.location.href = '/dashboard';
+            }
+            else {
+                window.location.href = '/login';
+            }
         })
     }, []);
     return (
