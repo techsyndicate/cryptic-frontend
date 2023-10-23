@@ -1,0 +1,3 @@
+#I sometimes forget my reffers so i store them here!
+#reffer - TSadmin
+#refferPassword - TSAdmin@1234

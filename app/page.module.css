@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.terminal {
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+}
