@@ -1,14 +1,11 @@
 "use client"
+import { getFrontendUrl } from '@/app/utils/misc';
 import React, { useEffect } from 'react'
 import { Oval } from 'react-loader-spinner';
 
-const urlPrefix = () => {
-    return "http://localhost:4000/"
-}
-
 function LoginCallback() {
     useEffect(() => {
-        fetch(urlPrefix() + "discord-back/login-callback", {
+        fetch(getFrontendUrl() + "discord-back/login-callback", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
