@@ -27,7 +27,7 @@ export default function Dashboard() {
     const [level, setLevel] = useState(null);
     const [clicked, setClicked] = useState([]);
 
-    const date = "Wed Oct 26 2023 00:01:00 GMT+0530 (India Standard Time)";
+    const date = "Wed Oct 26 2023 01:01:00 GMT+0530 (India Standard Time)";
 
     useEffect(() => {
         const notyf = new Notyf();
@@ -250,7 +250,7 @@ export default function Dashboard() {
                         </>
                         : ""}
                 </>
-                : <h1>Hunt has not started yet! Please come back on 26th Oct 00:01 AM</h1>}
+                : <h1>Hunt has not started yet! Please come back on 26th Oct 01:01 AM</h1>}
         </>
 
     )
