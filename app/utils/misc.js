@@ -1,6 +1,6 @@
 function getFrontendUrl() {
     if (process.env.NODE_ENV === 'production') {
-        return process.env.PROD_URL;
+        return "http://20.219.168.138/";
     } else {
         return 'http://localhost:4000/';
     }

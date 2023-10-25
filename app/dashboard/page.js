@@ -102,7 +102,6 @@ export default function Dashboard() {
         console.log(text);
     }
 
-
     function submit() {
         var notyf = new Notyf();
         var maintext = document.getElementById("maintext").value;
