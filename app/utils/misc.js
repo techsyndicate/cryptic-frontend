@@ -1,6 +1,6 @@
 function getFrontendUrl() {
     if (process.env.NODE_ENV === 'production') {
-        return "http://20.219.168.138/";
+        return "http://backend.encryptid.live/";
     } else {
         return 'http://localhost:4000/';
     }
