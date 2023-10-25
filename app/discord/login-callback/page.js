@@ -22,17 +22,8 @@ function LoginCallback() {
                 window.location.href = '/dashboard';
             }
             else {
-                var res_html = await res_copy.text()
-                // Initialize the DOM parser
-                var parser = new DOMParser();
-
-                // Parse the text
-                var doc = parser.parseFromString(res_html, "text/html");
-                document.getElementById('error').innerHTML = doc;
+                window.location.href = '/';
             }
-            // else {
-            //     window.location.href = '/login';
-            // }
         })
     }, []);
     return (
