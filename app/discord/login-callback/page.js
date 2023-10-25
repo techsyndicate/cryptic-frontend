@@ -15,13 +15,14 @@ function LoginCallback() {
             }),
             credentials: 'include',
         }).then(async (res) => {
+            var res_copy = res.clone()
             var res_json = await res.json()
             console.log(res_json)
             if (res_json.success === true) {
                 window.location.href = '/dashboard';
             }
             else {
-                var res_html = await res.text()
+                var res_html = await res_copy.text()
                 // Initialize the DOM parser
                 var parser = new DOMParser();
 
