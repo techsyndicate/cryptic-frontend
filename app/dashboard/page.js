@@ -27,7 +27,7 @@ export default function Dashboard() {
     const [level, setLevel] = useState(null);
     const [clicked, setClicked] = useState([]);
 
-    const date = "Wed Oct 26 2023 01:01:00 GMT+0530 (India Standard Time)";
+    const date = "Wed Oct 26 2023 10:01:00 GMT+0530 (India Standard Time)";
 
     useEffect(() => {
         const notyf = new Notyf();

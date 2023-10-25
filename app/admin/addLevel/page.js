@@ -22,13 +22,14 @@ export default function Page() {
         var levelNumber = document.getElementById("levelNumber").value;
         var maintext = document.getElementById("maintext").value;
         var authfrom = document.getElementById("authfrom").value;
+        var authfromphoto = document.getElementById("authfromphoto").value;
         var leveltype = document.getElementById("leveltype").value;
         var image = document.getElementById("image").value;
         var sourceCodeHint = document.getElementById("sourceCodeHint").value;
         var answer = document.getElementById("answer").value;
 
         var data = {
-            levelNumber, maintext, authfrom, image, sourceCodeHint, answer, leveltype
+            levelNumber, maintext, authfrom, image, sourceCodeHint, answer, leveltype, authfromphoto
         };
 
         fetch(getFrontendUrl() + 'admin/add', {
@@ -64,6 +65,11 @@ export default function Page() {
             <div class="field">
                 <label for="authfrom">Auth from?</label>
                 <textarea type="text" id="authfrom" name="authfrom" placeholder="Aayush Garg" />
+            </div>
+
+            <div class="field">
+                <label for="authfrom">Auth from photo</label>
+                <textarea type="text" id="authfromphoto" name="authfromphoto" placeholder="Aayush Garg" />
             </div>
 
             <div class="field">

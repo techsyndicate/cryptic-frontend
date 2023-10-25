@@ -30,9 +30,9 @@ function LoginCallback() {
         <div className='loading'>
             <Oval color="var(--loading)" secondaryColor="var(--loading)" ariaLabel='loading' height={100} width={100} />
             <div id='error'>
-
+                
             </div>
-        </div >
+        </div>
     )
 }
 
