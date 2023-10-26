@@ -93,7 +93,7 @@ export default function Dashboard() {
                 });
             })
         }
-    }, [])
+    },[])// eslint-disable-line react-hooks/exhaustive-deps
     function textchange() {
         var text = document.getElementById("maintext").value;
         //remove all spaces, special characters and lowercaps it all
