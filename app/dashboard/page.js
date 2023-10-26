@@ -225,7 +225,7 @@ export default function Dashboard() {
                         </div>
                     </div>
                     <div id='lvl-main'>
-                        <div id='lvl-container'>
+                        <div id='lvl-container' style={{ whiteSpace: "pre" }}>
                             <div id='top-desc'>
                                 <Image id="auth-image" width={0} height={0} sizes={1000} src={level?.authfromphoto} alt="user" />
                                 <div>
@@ -233,13 +233,17 @@ export default function Dashboard() {
                                     <p id='lvl-type'>Type: {level?.leveltype}</p>
                                 </div>
                             </div>
+                            {level?.image ?
+                                <Image id="lvl-image" width={0} height={0} sizes={1000} src={level?.image} alt="user" /> : null}
+                            
                             <p id='hint'>Get Authorisation from: {level?.authFrom}</p><br></br>
 
-                            <p id='deactivate-text'>Password Hint: {level?.maintext}</p><br></br>
+                            <p id='deactivate-text' style={{ whiteSpace: "pre" }}>Password Hint: {level?.maintext}</p><br></br>
                             <div id="field">
                                 <input onChange={textchange} oninput="textchange()" type="text" id="maintext" name="maintext" placeholder="Password" />
                                 <button className="try-here" id="try-here" onClick={submit}>Submit</button>
                             </div>
+                            {"<!--" + level?.sourceCodeHint + "-->"}<br></br>
                         </div>
                     </div>
 

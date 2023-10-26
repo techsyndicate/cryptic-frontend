@@ -2,6 +2,7 @@
 import { getFrontendUrl } from '@/app/utils/misc';
 import { Notyf } from 'notyf';
 import React, { useEffect, useState } from 'react'
+import './page.css'
 
 export default function Page() {
     const [users, setUsers] = useState([]);
@@ -66,8 +67,8 @@ export default function Page() {
     return (
         <div className="users-container">
             {users?.map((user) => (
-                <div key={user.name} style={{ display: 'flex' }}>
-                    <div className="user-object">
+                <div key={user.name} style={{ display: 'flex', padding: '10px'}} >
+                    <div id='userObject'>
                         <p>Name: {user.name}</p>
                         <p>School: {user.school}</p>
                         <p>
