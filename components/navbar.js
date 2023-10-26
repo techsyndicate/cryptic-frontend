@@ -73,10 +73,10 @@ export default function Navbar(user) {
                         <span class="num95">OS</span>
                     </div>
                 </div>
-                {user?.admin ? <div class="menuItem expander">Admin</div> : <div class="menuItem"> </div>}
-                <div class="menuItem"></div>
-                {/* {user ? <div class="menuItem" onClick={() => window.location.href = "/profile"}>Profile</div> : <div class="menuItem" id="shutdown"></div>}
-                {user ? <div class="menuItem" onClick={()=>window.location.href = "/leaderboard"}>Leaderboard</div> : <div class="menuItem" id="shutdown"></div>} */}
+                <div class="menuItem" id="shutdown"></div>
+                {user?.admin ? <div class="menuItem" onClick={()=>{window.location.href='/admin/users'}}>Admin</div> : <div class="menuItem"> </div>}
+                {user?.admin ? <div class="menuItem" onClick={() => { window.location.href = '/admin/users' }}>Admin Add level</div> : <div class="menuItem"> </div>}
+                {user ? <div class="menuItem" onClick={()=>window.location.href = "/leaderboard"}>Leaderboard</div> : <div class="menuItem" id="shutdown"></div>}
                 {user ? <div class="menuItem" onClick={()=>{window.location.href="/dashboard"}}>Firewall Utility</div> : <div class="menuItem" id="shutdown"></div>}
                 {user ? <div class="menuItem" onClick={() => { window.location.href = "/" }}>Terminal</div> : <div class="menuItem" id="shutdown"></div>}
                 <div class="divider"></div>
