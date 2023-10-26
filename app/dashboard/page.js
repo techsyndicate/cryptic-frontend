@@ -18,10 +18,10 @@ export default function Dashboard() {
     const [level8, SetLevel8] = useState("#16e16e")
     const [level9, SetLevel9] = useState("#f9f9f9")
     const [level10, SetLevel10] = useState("#f9f9f9")
-    const [level11, SetLevel11] = useState("#f9f9f9")
-    const [level12, SetLevel12] = useState("#f9f9f9")
+    const [level11, SetLevel11] = useState("#ff474c")
+    const [level12, SetLevel12] = useState("#ff474c")
     const [level13, SetLevel13] = useState("#f9f9f9")
-    const [level14, SetLevel14] = useState("#f9f9f9")
+    const [level14, SetLevel14] = useState("#ff474c")
     const [level15, SetLevel15] = useState("#f9f9f9")
     const [user, setUser] = useState(null);
     const [level, setLevel] = useState(null);

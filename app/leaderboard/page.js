@@ -59,7 +59,7 @@ export default function LeaderBoard() {
                     return (
                         <span key={index}>
                             {console.log(" ".repeat(20 - (user.name.toString()).length))}
-                            {index + "."} {" ".repeat(5 - (index + 1 + ".").toString().length) + "|"} {user.name} {" ".repeat(20 - (user.name.toString()).length) + "|"} {user?.discord} {" ".repeat(20 - ((user?.discord?.toString())?.length) || 0) + "|"}  {user.points.toString() + " ".repeat(20 - (user.name.toString()).length)}
+                            {index + "."} {" ".repeat(5 - (index + 1 + ".").toString().length) + "|"} {user.name} {" ".repeat(20 - (user.name.toString()).length) + "|"} {user?.discord?.toString().slice(0, 18)} {" ".repeat(20 - ((user?.discord?.toString().slice(0, 18))?.length) || 0) + "|"}  {user.points.toString().slice(0, 18) + " ".repeat(20 - (user.name.toString()).length)}
                             <br></br>
                         </span>
                     )
