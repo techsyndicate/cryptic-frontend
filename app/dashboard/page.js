@@ -235,7 +235,7 @@ export default function Dashboard() {
                             </div>
                             {level?.image ?
                                 <Image id="lvl-image" width={0} height={0} sizes={1000} src={level?.image} alt="user" /> : null}
-                            
+
                             <p id='hint'>Get Authorisation from: {level?.authFrom}</p><br></br>
 
                             <p id='deactivate-text' style={{ whiteSpace: "pre" }}>Password Hint: {level?.maintext}</p><br></br>
@@ -243,7 +243,8 @@ export default function Dashboard() {
                                 <input onChange={textchange} oninput="textchange()" type="text" id="maintext" name="maintext" placeholder="Password" />
                                 <button className="try-here" id="try-here" onClick={submit}>Submit</button>
                             </div>
-                            {"<!--" + level?.sourceCodeHint + "-->"}<br></br>
+                            {level?.sourceCodeHint ? <>
+                                {"<!--" + level?.sourceCodeHint + "-->"}</> : null}<br></br>
                         </div>
                     </div>
 
