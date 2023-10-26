@@ -1,10 +1,11 @@
+"use client"
 import React from 'react'
 // import { ReactTerminal, TerminalContextProvider } from 'react-terminal'
 
 export default function LeaderBoard() {
 
   return (
-      <div className={styles.terminal}>
+      <div>
         <h1>Leaderboard</h1>
           {/* <TerminalContextProvider>
               <ReactTerminal
