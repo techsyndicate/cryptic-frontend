@@ -7,7 +7,7 @@ export default function Page() {
     const [users, setUsers] = useState([]);
 
     function makeAdmin(id) {
-        fetch('/admin/admin/' + id, {
+        fetch(getFrontendUrl() + '/admin/admin/' + id, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -24,7 +24,7 @@ export default function Page() {
     }
 
     function banit(id) {
-        fetch('/admin/banit/' + id, {
+        fetch(getFrontendUrl() + '/admin/banit/' + id, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -75,7 +75,7 @@ export default function Page() {
                         </p>
                         <p>Levels Completed: {user.completedLevels}</p>
                         <p>Levels Unlocked: {user.availableLevels}</p>
-                        <p>Current Level: {user.current}</p>
+                        <p>Current Level: {user.currentLevel}</p>
                         <button onClick={() => makeAdmin(user._id)}>Admin: {user.admin}</button>
                         <button onClick={() => banit(user._id)}>Banned: {user.banned}</button>
                     </div>
@@ -84,7 +84,7 @@ export default function Page() {
                         {user?.answerlog?.map((log, index) => (
                             <div style={{ display: 'flex' }} key={index}>
                                 <p>try: {log.try}</p>
-                                <p>&nbsp;&nbsp; level: {log.level}</p>
+                                <p>&nbsp;&nbsp; level: {log.levelNumber}</p>
                             </div>
                         ))}
                     </div>
