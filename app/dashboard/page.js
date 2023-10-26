@@ -243,8 +243,8 @@ export default function Dashboard() {
                                 <input onChange={textchange} oninput="textchange()" type="text" id="maintext" name="maintext" placeholder="Password" />
                                 <button className="try-here" id="try-here" onClick={submit}>Submit</button>
                             </div>
-                            {level?.sourceCodeHint ? <>
-                                {"<!--" + level?.sourceCodeHint + "-->"}</> : null}<br></br>
+                            {level?.sourceCodeHint ? <div style={{ display: 'none' }}>
+                                {level?.sourceCodeHint}</div> : null}<br></br>
                         </div>
                     </div>
 
