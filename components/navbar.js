@@ -48,7 +48,11 @@ export default function Navbar(user) {
     async function logout() {
         await fetch(getFrontendUrl()+"auth/logout", {
             method: "GET",
-            credentials: "include"
+            credentials: "include",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + document.cookie.split('VeinAuth=')[1].split(';')[0],
+            }
         }).then(res => res.json()).then(res => {
             if (res.success) {
                 window.location.href = "/";

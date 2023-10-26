@@ -7,17 +7,18 @@ function LoginCallback() {
     useEffect(() => {
         fetch(getFrontendUrl() + "discord-back/login-callback", {
             method: "POST",
-            headers: {
-                'Content-Type': 'application/json'
-            },
             body: JSON.stringify({
                 code: window.location.href.split('?code=')[1]
-            }),
-            credentials: 'include',
+            }), credentials: "include",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + document.cookie.split('VeinAuth=')[1].split(';')[0],
+            }
         }).then(async (res) => {
-            var res_copy = res.clone()
             var res_json = await res.json()
             console.log(res_json)
+            //set cookie from data.token
+            document.cookie = `VeinAuth=${res_json.data.token};path=/;max-age=86400;`;
             if (res_json.success === true) {
                 window.location.href = '/dashboard';
             }

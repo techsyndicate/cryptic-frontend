@@ -46,10 +46,11 @@ export default function Page() {
 
         fetch(getFrontendUrl() + 'admin/users', {
             method: 'GET',
+            credentials: "include",
             headers: {
-                'Content-Type': 'application/json'
-            },
-            credentials: 'include'
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + document.cookie.split('VeinAuth=')[1].split(';')[0],
+            }
         }).then(res => {
             return res.json();
         }).then(data => {

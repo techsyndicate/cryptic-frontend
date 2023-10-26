@@ -34,10 +34,11 @@ export default function Page() {
 
         fetch(getFrontendUrl() + 'admin/add', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
             credentials: "include",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + document.cookie.split('VeinAuth=')[1].split(';')[0],
+            },
             body: JSON.stringify(data)
         }).then(function (response) {
             return response.json();

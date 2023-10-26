@@ -27,7 +27,7 @@ export default function Dashboard() {
     const [level, setLevel] = useState(null);
     const [clicked, setClicked] = useState([]);
 
-    const date = "Wed Oct 26 2023 10:01:00 GMT+0530 (India Standard Time)";
+    const date = "Wed Oct 26 2023 08:01:00 GMT+0530 (India Standard Time)";
 
     useEffect(() => {
         const notyf = new Notyf();
@@ -113,10 +113,11 @@ export default function Dashboard() {
         };
         fetch(getFrontendUrl() + 'level/submit', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
             credentials: "include",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + document.cookie.split('VeinAuth=')[1].split(';')[0],
+            },
             body: JSON.stringify(data)
         }).then(function (response) {
             submit.disabled = false;
@@ -230,7 +231,7 @@ export default function Dashboard() {
                             <div id='lvl-main'>
                                 <div id='lvl-container'>
                                     <div id='top-desc'>
-                                        <Image id="auth-image" width={0} height={0} sizes={1000} src="https://avatars.githubusercontent.com/u/74775129?v=4" alt="user" />
+                                        <Image id="auth-image" width={0} height={0} sizes={1000} src={level?.authfromphoto} alt="user" />
                                         <div>
                                             <p id='lvl-name'>{"Level " + level?.levelNumber}</p>
                                             <p id='lvl-type'>Type: {level?.leveltype}</p>
