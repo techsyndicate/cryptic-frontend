@@ -12,7 +12,6 @@ function LoginCallback() {
             }), credentials: "include",
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + document.cookie.split('VeinAuth=')[1].split(';')[0],
             }
         }).then(async (res) => {
             var res_json = await res.json()
