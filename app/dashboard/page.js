@@ -27,7 +27,7 @@ export default function Dashboard() {
     const [level, setLevel] = useState(null);
     const [clicked, setClicked] = useState([]);
 
-    const date = "Wed Oct 26 2023 14:01:00 GMT+0530 (India Standard Time)";
+    const date = "Wed Oct 26 2023 14:46:00 GMT+0530 (India Standard Time)";
 
     useEffect(() => {
         const notyf = new Notyf();
@@ -59,7 +59,7 @@ export default function Dashboard() {
             }
         })
 
-        if (new Date(date).getTime() >= Date.now()) {
+        if (new Date(date).getTime() <= Date.now()) {
             getUser().then(res => {
                 console.log(res)
                 if (!res.success) {
@@ -139,7 +139,7 @@ export default function Dashboard() {
 
     return (
         <>
-            {console.log(new Date(date).getTime() >= Date.now(), user)}
+            {console.log(new Date(date).getTime() <= Date.now(), user)}
             {new Date(date).getTime() >= Date.now() ?
                 <>
                     {user ?
