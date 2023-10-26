@@ -2,9 +2,10 @@ import React from 'react'
 import { ReactTerminal, TerminalContextProvider } from 'react-terminal'
 
 export default function LeaderBoard() {
+
   return (
       <div className={styles.terminal}>
-          <TerminalContextProvider>
+          {/* <TerminalContextProvider>
               <ReactTerminal
                   prompt={prompt}
                   theme={theme}
@@ -14,7 +15,7 @@ export default function LeaderBoard() {
                   enableInput={false}
                   defaultHandler={DefaultHandler}
               />
-          </TerminalContextProvider>
+          </TerminalContextProvider> */}
       </div>
 
   )
